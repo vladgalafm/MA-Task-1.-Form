@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    Personal Information
+</h1>
+<form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+    <fieldset>
+        <legend>
+            Personal Information
+        </legend>
+        <label for="surname">Surname: </label><input name="surname" id="surname" type="text" required min="2"><br/>
+        <label for="name">Name: </label><input name="name" id="name" type="text" required min="2"><br/>
+        <label for="age">How old are you?: </label><input name="age" id="age" type="number" maxlength="3" min="0" max="999" size="4"><br/>
+        <label for="birthdate">Full date of birth: </label><input name="birthdate" id="birthdate" type="date"/><br/>
+        <label for="agreement">I accept the terms of the agreement </label><input name="agreement" id="agreement" type="checkbox" required>
+    </fieldset>
+    <fieldset>
+        <legend>
+            Registration
+        </legend>
+        <label for="email">E-mail: </label><input name="email" id="email" type="email" required><br/>
+        <label for="password">Password: </label><input name="password" id="password" type="password" autocomplete="disabled" required>
+    </fieldset>
+    <fieldset>
+        <legend>
+            An interesting fact about you!
+        </legend>
+        <label>Do you love cats?</label><br/>
+        <input id="catsyes" name="cats" type="radio"/> <label for="catsyes">Yes</label><br/>
+        <input id="catsnot" name="cats" type="radio"/> <label for="catsnot">Not</label><br/>
+        <label for="color">What is  favourite color?</label><br/>
+        <input id="color" type="color"><br/>
+        <label for="timetobed">What time do you go to bed?</label><br/><input id="timetobed" type="time" step="10"><br/>
+        <label>what your favourite brand of cars?</label><br/>
+        <select size="4" name="favCar">
+            <option>bmw</option>
+            <option>audi</option>
+            <option selected>lada</option>
+        </select><br/>
+        <label>How do you rate our work?</label><br/>
+        <input name="rating" type="range" min="0" max="10">
+    </fieldset>
+    <fieldset>
+        <legend>
+            Your comments:
+        </legend>
+        <textarea row='2' placeholder="Comments" name="comments"></textarea>
+    </fieldset>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
